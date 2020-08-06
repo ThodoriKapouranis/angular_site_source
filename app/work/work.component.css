@@ -1,0 +1,243 @@
+.container{
+    display:block;
+    position:relative;
+    width:100%;
+    color:rgb(255, 245, 245);
+    height:60vh;
+    z-index: 0;
+    overflow: hidden;
+}
+.small{
+    height:5vh;
+}
+
+.no-border{
+    margin:0px;
+    padding:0px;
+}
+.tab{
+    background-color: #3441ef;
+    cursor: pointer;
+    text-align: center;
+    position: absolute;
+    padding-top:10px;
+    right:15%;
+    height:5vh;
+    top:0%;
+    width:15%;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+    border-style: solid;
+    border-width:0px;
+    border-bottom-color: yellow;
+}
+
+.show1{
+    background-color: #3441ef
+}
+
+.show2{
+    background-color:#4752f3;
+}
+.context{
+    color:rgb(129, 129, 129);
+    font-weight: bolder;
+    font-size:1.25rem;
+    font-family: "roboto";
+}
+.inner{
+    position: absolute;
+    width:80%;
+    left:10%;
+    height:85%;
+    top:7.5%;
+    margin:0px;
+    padding:0px;
+    border-radius:50px;
+    z-index: 0;
+}
+
+.left{
+    position: absolute;
+    top:0%;
+    left:0%;
+    width:50%;
+    height:100%;
+    z-index: 0;
+}
+.right{
+    position: absolute;
+    top:0%;
+    right:0%;
+    width:50%;
+    height:100%;
+    z-index: 0;
+
+}
+.image-container{
+    display:block;
+    position:relative;
+    margin-top: 20px;
+    left:25%;
+    width:50%;
+    height:10%;
+}
+.image-container img{
+    width:90%;
+    border-radius: 45px;
+
+}
+.title{
+    position: relative;
+    display:inline-block;
+    top:0px;
+    margin:0px;
+    margin-top:20px;
+    padding:0px;
+    width:100%;
+    text-align: center;
+    font-size: 2rem;    
+    font-weight: bolder;
+}
+.tech{
+    position: relative;
+    font-family: "roboto";
+    width:100%;
+    min-height:50%;
+    max-height:75%;
+    text-align: center;
+    padding-top: 5%;
+}
+.tech ul{
+    text-align:left;
+    font-size: 1rem;
+    line-height: 2em;
+}
+.tech hr{
+    width:50%;
+}
+.rl{
+    position: absolute;
+    width:25%;
+    left:20%;
+}
+
+.rr{
+    position: absolute;
+    width:25%;
+    right:20%;
+}
+
+.bottom-right{
+    position: absolute;
+    bottom:17.5%;
+    width:100%;
+}
+
+.description{
+    position:relative;
+    top:-10px;
+    padding-right: 20px;
+}
+
+.button{
+    right:10%;
+    text-align: center;
+    border: 2px solid currentColor;
+    width:30%;
+    border-radius: 3rem;
+    color: #ff54a7;
+    font-family: "roboto";
+    font-size: 1.5rem;
+    font-weight: 100;
+    overflow: hidden;
+    padding: .5rem 1.5rem;
+    position: absolute;
+    text-decoration: none;
+    transition: .2s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
+}
+
+.button::after{
+    background-color: #ff54a7;
+    border-radius: 3rem;
+    content: '';
+    overflow:hidden;
+    display: block;
+    opacity: 0%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(20deg);
+    transform-origin: top left;
+    transition: .3s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+}
+
+.button:hover::after{
+    transform: translate(0, 0);
+    opacity: 100%;
+
+}
+
+.button:hover{
+    border: 2px solid transparent;
+    color: #ffffff;
+    transform: scale(1.05);
+    will-change: transform;
+}
+
+.button1{
+right:55%;
+color:#3e403f;
+}
+
+.button1::after{
+    background-color:#3e403f;
+}
+
+body{
+    margin:0
+}
+
+
+.big-description{
+    color:white;
+    padding-left:10vw;
+    padding-right:10vw;
+    padding-bottom:5vh;
+    margin-top: 0px;
+}
+
+.big-description h1{
+    color:red;
+}
+
+.description-close{
+    height:auto;
+    animation-name: close-desc;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+.description-open{
+    height:auto;
+    animation-name: open-desc;
+    animation-duration:1s;
+    animation-direction: forwards;
+
+}
+
+@keyframes open-desc{
+    from {max-height:0px}
+    to {max-height:1000px}
+}
+
+@keyframes close-desc{
+    from {max-height:500px}
+    to {max-height:0px}
+}

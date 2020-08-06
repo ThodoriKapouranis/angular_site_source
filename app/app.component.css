@@ -1,0 +1,24 @@
+.center{
+    margin:auto;
+    text-align: center;
+}
+.welcome{
+    position:relative;
+    padding-top: 125px;
+    padding-bottom:125px;
+}
+.name{
+    font-size: 48px;
+    font-weight: bolder;
+    color:rgb(34, 47, 226);
+    font-style:italic;
+}
+.bottomtext{
+    font-size:28px;
+    color:rgb(52, 64, 238);
+}
+.show{
+    background-color:rgb(0,0,0,0.2);
+    min-width: 1px;
+    min-height: 1px;
+}

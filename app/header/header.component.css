@@ -1,0 +1,17 @@
+.header{
+    position:absolute;
+    display:inline-block;
+    right:0px;
+    top:0px;
+    height:75px;
+    width:100%;
+}
+
+.burger{
+    position: absolute;
+    display:table-cell;
+    vertical-align: middle;
+    max-height: 100%;
+    right:0%;
+    padding-right: 25px;
+}

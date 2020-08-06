@@ -1,0 +1,79 @@
+<div class="container" [ngStyle]="{'background-color': colorKey[0]}">
+    
+    <span class="context"  [ngStyle]="{'color': colorKey[2]}">
+        {{context}}
+    </span>
+
+    <div class="inner" [ngStyle]="{'background-color': colorKey[1]}">
+
+        <div class="left">
+            <div class="title">{{title}}</div>
+
+            <div class="image-container">
+                <img src={{img}}>
+            </div>
+        </div>
+
+        <div class="right">
+
+            <div class="tech">
+                <span class="center" style="font-weight:bolder">Technologies Used</span>
+                <hr>
+                <div class="rl">
+                    <ul class="rl-list">
+                        <li *ngFor="let tech of left">{{tech}}</li>
+                    </ul>
+                </div>
+                <div class="rr">
+                    <ul class="rr-list">
+                        <li *ngFor="let tech of right">{{tech}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="description">
+                {{description}}
+            </div>
+
+            <div *ngIf=url class="bottom-right">
+                <a href={{url}}>
+                    <div class="button">
+                        Live demo
+                    </div>
+                 </a>
+            </div>
+
+            <div *ngIf=github_url class="bottom-right">
+                <a href={{github_url}}>
+                    <div class="button button1">
+                        Github
+                    </div>
+                 </a>
+            </div>
+            
+        </div>
+
+    </div>
+
+</div>
+
+<div class="description-open" *ngIf=show_description [ngStyle]="{'background-color': colorKey[0]}">
+    <div class=big-description *ngIf=big_description [innerHTML]="big_description" >
+    </div>
+</div>
+
+<div class="description-close" *ngIf="show_description == false" [ngStyle]="{'background-color': colorKey[0]}">
+    <div class=big-description *ngIf=big_description [innerHTML]="big_description">
+    </div>
+</div>
+
+<div class="container small no-border" [ngStyle]="{'background-color': colorKey[3]}" (click)="show()">
+    <div class="tab no-border" [ngStyle]="
+    {'color': colorKey[2],
+    'background-color': colorKey[0]}">
+         Details
+    </div>
+</div>
+
+
+
+
